@@ -41,11 +41,11 @@ Update the database configuration in the backend.
 5. **Run the backend server**
    ```bash
    cd backend
-   npm start
+   npm run server
 6. **Run the frontend server**
   ```bash
   cd ../frontend
-  npm start
+  npm run dev
 
 
 
