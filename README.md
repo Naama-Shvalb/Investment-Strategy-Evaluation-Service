@@ -39,9 +39,9 @@ To run this project locally, follow these steps:
 Create a new MySQL database.
 Update the database configuration in the backend.
 5. **Run the backend server**
-  ```bash
-  cd backend
-  npm start
+   ```bash
+   cd backend
+   npm start
 6. **Run the frontend server**
   ```bash
   cd ../frontend
