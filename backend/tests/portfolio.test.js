@@ -1,6 +1,6 @@
 // portfolio.test.js
 
-const Portfolio = require('../services/portfolio');
+const Portfolio = require('../src/services/portfolio');
 
 describe('Portfolio', () => {
     it('Should be existing', () => {

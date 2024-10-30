@@ -4,8 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "tsc && cp -R src/data dist/data",
+    "start": "node dist/app.js",
+    "dev": "ts-node src/app.ts",
     "test": "jest",
-    "server": "nodemon app.js"
+    "lint": "eslint 'src/**/*.{js,ts}' --fix"
   },
   "author": "",
   "license": "ISC",
@@ -29,7 +32,18 @@
     "yahoo-finance2": "^2.11.3"
   },
   "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
     "@types/jest": "^29.5.14",
-    "ts-jest": "^29.2.5"
+    "@types/node": "^22.8.4",
+    "@typescript-eslint/eslint-plugin": "^8.12.2",
+    "@typescript-eslint/parser": "^8.12.2",
+    "eslint": "^9.13.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "prettier": "^3.3.3",
+    "ts-jest": "^29.2.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3"
   }
 }

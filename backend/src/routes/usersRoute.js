@@ -1,5 +1,5 @@
 const express = require("express");
-const { UsersController } = require('../controllers/userscontroller.js');
+const { UsersController } = require('../controllers/usersController.js');
 const { validateUserData, validate } = require("../middleware/validationMiddleware.js");
 const { validationResult } = require("express-validator");
 const { authorizeUser } = require("../middleware/authorizationMiddleware.js");
