@@ -1,9 +1,9 @@
-const { createConnection } = require('./db.js');
+const { createConnection } = require("./db.js");
 
 async function executeQuery(query, params) {
   let results;
   const connection = await createConnection();
-  
+
   try {
     [results] = await connection.execute(query, params);
   } catch (err) {
@@ -11,7 +11,7 @@ async function executeQuery(query, params) {
   } finally {
     await connection.end();
   }
-  
+
   return results;
 }
 

@@ -14,5 +14,5 @@ module.exports.submitFormController = {
     } catch (error) {
       res.status(500).json({ message: "Internal Server Error" });
     }
-  }
+  },
 };

@@ -1,16 +1,16 @@
-import express, { Request, Response, NextFunction } from "express";
-import dotenv from "dotenv";
 import cors from "cors";
+import dotenv from "dotenv";
+import express, { Request, Response, NextFunction } from "express";
 
 // Import your routes and middleware
-import usersRouter from "./routes/usersRoute";
-import registerRouter from "./routes/registerRoute";
-import loginRouter from "./routes/loginRoute";
-import strategyRouter from "./routes/strategyRoute";
-import submitFormRouter from "./routes/submitFormRoute";
+import authenticateToken from "./middleware/authenticateToken";
 import exampleRouter from "./routes/exampleRoute";
 import gptresponseRouter from "./routes/gptresponseRoute";
-import authenticateToken from "./middleware/authenticateToken";
+import loginRouter from "./routes/loginRoute";
+import registerRouter from "./routes/registerRoute";
+import strategyRouter from "./routes/strategyRoute";
+import submitFormRouter from "./routes/submitFormRoute";
+import usersRouter from "./routes/usersRoute";
 
 // Initialize dotenv to load environment variables
 dotenv.config();

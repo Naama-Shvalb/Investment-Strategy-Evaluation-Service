@@ -1,10 +1,10 @@
 const nodemailer = require("nodemailer");
-require('dotenv').config();
+require("dotenv").config();
 
 const submitFormService = {
   async sendEmails({ name, email, message }) {
     let transporter = nodemailer.createTransport({
-      service: 'Gmail',
+      service: "Gmail",
       auth: {
         user: process.env.MANAGER_EMAIL,
         pass: process.env.EMAIL_PASSWORD,
@@ -14,14 +14,14 @@ const submitFormService = {
     await transporter.sendMail({
       from: `"Investors Support" <${process.env.MANAGER_EMAIL}>`,
       to: process.env.MANAGER_EMAIL,
-      subject: 'New Contact Form Submission',
+      subject: "New Contact Form Submission",
       text: `You received a new message from ${name} (${email}): ${message}`,
     });
 
     await transporter.sendMail({
       from: `"Investors Support" <${process.env.MANAGER_EMAIL}>`,
       to: email,
-      subject: 'Confirmation of Your Submission',
+      subject: "Confirmation of Your Submission",
       html: `
         <p>Thank you, ${name}, for your message. We will get back to you soon.</p><br></br><br></br>
         <p>Always with you,</p>
@@ -29,13 +29,13 @@ const submitFormService = {
       `,
       attachments: [
         {
-          filename: 'logo.png',
-          path: '../Client/Images/logo.png',
-          cid: 'unique@nodemailer.com'
-        }
-      ]
+          filename: "logo.png",
+          path: "../Client/Images/logo.png",
+          cid: "unique@nodemailer.com",
+        },
+      ],
     });
-  }
+  },
 };
 
 module.exports = { submitFormService };
