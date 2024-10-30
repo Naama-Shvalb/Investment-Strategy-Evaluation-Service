@@ -143,7 +143,7 @@ export default Strategy;
 
 rangeExecuter:
 —----------
-import Portfolio from './portfolio.js';
+import Portfolio from './portfolio.ts';
 class RangesExecutor {
     stocksData;
     portfolio;
